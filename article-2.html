@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 1: Setting the Foundation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Day 2–3 — Building the First Automation Scripts</h1>
+		<span class="image main"><img src="images/blog-2-header.png" alt="" /></span>
+
+		<p>After getting OpenClaw running on Day 1, the focus shifted almost immediately. Having the tool installed was one thing, but using it manually through the UI was never the goal. From the beginning, the idea was to build a system where Azure DevOps could act as the control layer and OpenClaw could act as the developer.</p>
+
+		<p>Day 2 and Day 3 were where that transition began. This was the point where things moved from simply experimenting with a tool to actually designing a workflow around it.</p>
+
+		<p>The first step was figuring out how to pull work from Azure DevOps. Instead of manually reading user stories, I needed a way to query them programmatically. This led me to WIQL, which allowed me to fetch work items directly from the board. With that in place, I now had a way to ask a simple but powerful question: what work should the AI pick up next?</p>
+
+		<p>Once I could retrieve work items, the next challenge became how to structure them. Passing raw descriptions into OpenClaw was not enough. I needed to define the problem clearly, include acceptance criteria, and remove ambiguity as much as possible. This led to the introduction of a prompt construction layer, which effectively translates Azure DevOps work items into structured inputs the AI can reason about.</p>
+
+		<p>This was an important shift in thinking. Prompts stopped being simple inputs and started becoming interfaces. The way the problem is framed directly impacts the quality of the output.</p>
+
+		<p>At the same time, I needed a way to manage state. Without it, the same work item could be picked up repeatedly. I introduced a basic tracking approach to keep track of what had already been processed versus what was new. It was simple, but it solved a critical problem early.</p>
+
+		<p>The final piece was figuring out how to actually communicate with OpenClaw programmatically. At this stage, there was no clean integration. It involved experimenting with how to send prompts and capture responses through the control UI. This was not stable yet, but it was enough to start testing the loop.</p>
+
+		<p>By the end of Day 3, I had the first version of that loop working. It could query Azure DevOps, pull a work item, build a structured prompt, send it to OpenClaw, and capture the response. It was rough and far from reliable, but it proved that the concept worked.</p>
+
+		<p>One of the biggest realizations during this phase was how important input quality is. The clearer and more structured the prompt, the better the reasoning and output from the agent. This reinforced something I had already seen in my day-to-day work: well-defined requirements lead to better outcomes, whether you are working with developers or AI.</p>
+
+		<p>Another realization was that OpenClaw does not provide a ready-made workflow. There is no built-in Azure DevOps integration or execution pipeline. Everything around it needs to be designed and built. While this adds complexity, it also means the system can be shaped exactly how I want it to behave.</p>
+
+		<p>By the end of Day 3, it was clear that this was no longer about writing a few scripts. This was the beginning of building an AI-driven development workflow. And workflows require structure, state management, and feedback loops to function properly.</p>
+
+		<p>The next step is to make this loop reliable. Right now it works, but only under ideal conditions. The focus moving forward will be stabilizing communication with OpenClaw, handling failures, and ensuring outputs can consistently be fed back into Azure DevOps.</p>
+	</div>
+</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
