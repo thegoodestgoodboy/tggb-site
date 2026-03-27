@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>Day 1: Setting the Foundation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,7 +22,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
 								</a>
 
 							<!-- Nav -->
@@ -49,15 +49,31 @@
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner">
-							<h1>Generic Page</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
-					</div>
+	<div class="inner">
+		<h1>Day 1 — Setting Up OpenClaw</h1>
+		<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
 
+		<p>This journey started with a simple idea: what if I could automate parts of the software development process the same way we automate workflows?</p>
+
+		<p>Coming from a support engineering background, I spend most of my time investigating issues, writing user stories, and coordinating between customers and developers. I am always close to the solution, but rarely the one building it. OpenClaw immediately stood out to me because it sits right at that intersection. It acts like an autonomous developer that can reason through tasks, generate code, and iterate based on structured input.</p>
+
+		<p>Before installing anything, I set a clear goal. I wanted to connect Azure DevOps to an AI agent that could read user stories and attempt to build them. That meant this was not just about trying a tool. It needed to fit into a real workflow from the start.</p>
+
+		<p>The installation itself was not a one-click experience. OpenClaw runs as a local service with a web-based control interface, and it expects a specific project structure. Almost immediately, I ran into my first issue: missing UI assets and instructions to build them using pnpm. That led to a short detour where I realized pnpm was not installed, and more importantly, that I was running commands in the wrong directory.</p>
+
+		<p>This was the first real lesson. OpenClaw is not plug-and-play. It expects you to understand and respect the environment it operates in.</p>
+
+		<p>Once I slowed down and approached it more methodically, the architecture started to make sense. There is a gateway service running locally, a browser-based control UI, and a workspace where your actual project lives. Understanding how these pieces interact was more important than the installation itself.</p>
+
+		<p>After working through the setup issues, restarting services, and dealing with a few non-obvious prompts, everything finally came online. The UI loaded, the agent responded, and I was able to send my first prompt successfully.</p>
+
+		<p>What stood out immediately was how the agent approached problems. It did not just generate code. It reasoned first, identified ambiguities, and then proposed an approach. That behavior felt much closer to working with a junior developer than interacting with a typical AI tool.</p>
+
+		<p>By the end of Day 1, OpenClaw was up and running, but more importantly, I had a better understanding of what it actually is. This is not just a tool you use. It is something you build around. The real value is not in getting it installed, but in figuring out how to integrate it into a system.</p>
+
+		<p>Next step: move beyond the UI and start building the automation layer that connects OpenClaw to Azure DevOps.</p>
+	</div>
+</div>
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
