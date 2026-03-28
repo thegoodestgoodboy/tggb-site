@@ -1,1 +1,133 @@
 
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 1: Setting the Foundation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Day 4–5 — From Scripts to a Working System</h1>
+		<span class="image main"><img src="images/blog-3-header.png" alt="" /></span>
+
+		<p>By the end of Day 3, I had something that technically worked. I could pull a work item from Azure DevOps, construct a prompt, send it to OpenClaw, and get a response back. On paper, that sounds like a complete loop. In reality, it was fragile and inconsistent.</p>
+
+		<p>Day 4 and Day 5 were focused on one thing: making the system actually usable.</p>
+
+		<p>The biggest challenge at this stage was communication with OpenClaw. There was no clean API to integrate with, so I was relying on automating interactions through the control UI. This introduced a new class of problems that had nothing to do with logic and everything to do with timing and reliability.</p>
+
+		<p>Simple actions like clicking buttons or capturing responses were not guaranteed to work every time. There were delays, elements not being ready, and occasional timeouts. It became clear very quickly that even if the overall architecture was sound, the system would fail without proper handling of these edge cases.</p>
+
+		<p>This led to the introduction of basic stabilization strategies. I started thinking in terms of retries, wait conditions, and ensuring that each step completed successfully before moving to the next. Instead of assuming success, the system now had to verify it.</p>
+
+		<p>At the same time, I focused on closing the loop with Azure DevOps. It was not enough to just generate a response from OpenClaw. That response needed to be persisted back into the work item in a meaningful way. This meant posting comments that captured the AI’s reasoning, approach, and proposed changes.</p>
+
+		<p>This was a turning point. For the first time, the system was not just running in isolation. It was interacting with a real workflow and leaving behind artifacts that could be reviewed and iterated on.</p>
+
+		<p>One of the more interesting realizations during this phase was how different this felt from traditional scripting. Writing the scripts themselves was not the difficult part. The challenge was designing a sequence of steps that could reliably execute in an unpredictable environment.</p>
+
+		<p>It also became clear that I was working with a system that had multiple points of failure. The Azure DevOps query could fail. The prompt construction could be incomplete. The UI automation could break. The response could fail to capture. Each of these needed to be accounted for.</p>
+
+		<p>Despite all of this, by the end of Day 5, I had something that felt significantly more real. I could trigger the process, watch it pick up a work item, send it through OpenClaw, and see the output appear back in Azure DevOps. It was not perfect, but it was consistent enough to start building on.</p>
+
+		<p>This phase also reinforced an important shift in mindset. I was no longer thinking in terms of individual scripts. I was thinking in terms of systems, dependencies, and failure handling. The focus had moved from “can this work” to “how do I make this reliable.”</p>
+
+		<p>The next step is to move beyond basic functionality and start evaluating the quality of the output. Now that the system can execute, the question becomes: how well does it actually perform as a developer?</p>
+	</div>
+</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
