@@ -1,1 +1,129 @@
 
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 6: AI as a Developer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Day 6: Evaluating the AI as the Developer</h1>
+		<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+
+		<p>By the end of Day 5, I had a system that could reliably execute a basic loop. It could pull work from Azure DevOps, send it to OpenClaw, and return a response. At that point, the focus shifted from building and stabilizing to something more important: evaluation.</p>
+
+		<p>It was no longer enough to ask if the system worked. The real question became whether it was producing meaningful, usable results. If OpenClaw was going to act as a developer, I needed to understand how well it actually performed in that role.</p>
+
+		<p>I started by creating a series of test scenarios. These were not random tasks. They were designed to probe specific behaviors. Some tasks were straightforward, like adding functionality or writing unit tests. Others were intentionally more complex, involving multiple files or stricter constraints. I also introduced edge cases, including tasks that were impossible under the given requirements.</p>
+
+		<p>The goal was to observe how the agent reasoned through each situation. Did it identify the correct files? Did it follow the acceptance criteria? Did it avoid making unnecessary changes? More importantly, did it recognize when a request could not be completed as stated?</p>
+
+		<p>What stood out almost immediately was the reasoning process. OpenClaw did not just jump to an answer. In many cases, it broke the problem down, identified gaps or ambiguities, and proposed a structured approach before attempting a solution. This behavior felt much closer to working with a developer than interacting with a typical AI tool.</p>
+
+		<p>There were also clear areas for improvement. While the reasoning was often strong, execution could still be inconsistent depending on how well the prompt was structured. This reinforced something I had already started to see earlier in the process: the quality of the input directly shapes the quality of the output.</p>
+
+		<p>This phase introduced a new layer to the system. It was no longer just about automation. It was about defining what “good” looks like. I found myself thinking in terms of evaluation criteria, similar to how you would assess a developer during code review. Accuracy, completeness, adherence to requirements, and impact on unrelated parts of the codebase all became part of that assessment.</p>
+
+		<p>Another important realization was that failure cases were just as valuable as successful ones. When the agent struggled or produced incomplete results, it highlighted gaps either in the prompt, the structure of the task, or the system itself. Each failure became a data point that could be used to refine the process.</p>
+
+		<p>By the end of Day 6, I had a much clearer understanding of how OpenClaw behaves under different conditions. It is capable of structured reasoning and can handle a range of development tasks, but it is highly dependent on how the problem is framed.</p>
+
+		<p>This marked a shift in focus once again. The system was no longer just something I was building. It was something I was actively evaluating and refining. The next step is to address the constraints that start to appear as usage increases, particularly around performance, limits, and scalability.</p>
+	</div>
+</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
