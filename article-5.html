@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 7: First Real Speedbumps</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Day 7: Hitting API Limits and System Constraints</h1>
+		<span class="image main"><img src="images/blog-5-header.png" alt="" /></span>
+
+		<p>Up until this point, the focus had been on getting the system to work and then validating how well it performed. By Day 6, I had something that could execute tasks and produce structured outputs. Naturally, the next step was to push it further.</p>
+
+		<p>That is where I ran into my first real constraint.</p>
+
+		<p>As I increased usage and started running more scenarios through the system, I began encountering rate limits from the AI provider. At first, it was intermittent. A request would fail, then succeed on retry. But as I continued testing, it became clear that this was not a one-off issue. It was a fundamental limitation of the system.</p>
+
+		<p>This introduced a completely new dimension to the project. Up until now, I had been focused on functionality and correctness. Now I had to think about throughput, limits, and cost.</p>
+
+		<p>I started digging into how the rate limiting actually worked. There were tiers, token limits per minute, and overall usage caps. The difference between tiers was significant, and it became obvious that scaling this system would require a deeper understanding of how requests were being structured and sent.</p>
+
+		<p>This led to a few immediate questions. How often should the system poll for work? How large should each prompt be? How do I avoid unnecessary or duplicate requests? And most importantly, how do I ensure that the system remains responsive without exceeding limits?</p>
+
+		<p>At this stage, I began experimenting with basic mitigation strategies. This included introducing delays between requests, thinking about retry logic, and being more intentional about how prompts were constructed. Reducing unnecessary context became just as important as adding the right information.</p>
+
+		<p>Another realization was that not all tasks need to be processed immediately. Just because the system can pick up a work item does not mean it should. This opened the door to thinking about prioritization and scheduling, rather than treating every task equally.</p>
+
+		<p>This phase also forced me to start thinking about cost in a more concrete way. Running multiple iterations, large prompts, and repeated retries all add up. What started as an experiment now had real implications in terms of resource usage.</p>
+
+		<p>By the end of Day 7, the system was still functional, but it was clear that I had reached the limits of a naive implementation. Simply sending more requests and hoping for the best was not going to scale.</p>
+
+		<p>This was an important moment in the journey. Constraints like these are not blockers. They are signals. They force better design decisions and push the system toward something more intentional.</p>
+
+		<p>The next step is to move from reacting to these constraints to designing around them. That means improving efficiency, adding smarter control over execution, and continuing to refine how the system behaves under load.</p>
+	</div>
+</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
