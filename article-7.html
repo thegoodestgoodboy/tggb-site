@@ -1,1 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 9: From System to Product</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Day 9 — From System to Product: Building the First Tools</h1>
+		
+    <div class="image-container">
+      <img src="images/capacity-forecaster-mockup.png" alt="">
+      <img src="Stalled-processes-mockup.png" alt="">
+      <img src="unused-assets-tracker-mockup.png" alt="">
+    </div>
+
+
+		<p>Up until this point, most of the work has been focused on building the system itself. Getting OpenClaw running, wiring it into Azure DevOps, stabilizing execution, and understanding its limitations. All of that was necessary, but it was still one step removed from the actual goal.</p>
+
+		<p>Today was the first time things shifted from building the system to building the product.</p>
+
+		<p>The first step was standing up a fresh Dynamics environment. Instead of working in isolation, I wanted to build directly in a platform that reflects real-world usage. Alongside that, I created the initial tables needed to support what will eventually become a system optimization and maintenance solution.</p>
+
+		<p>With the environment in place, the next decision was what to actually build. Rather than trying to tackle everything at once, I narrowed the scope down to three initial tools: a stalled process panel, a capacity forecaster, and an unused asset tracker.</p>
+
+		<p>This was a deliberate choice. Each of these tools targets a specific type of problem I have seen repeatedly. Processes that get stuck and go unnoticed. Database growth that is only addressed once it becomes expensive. Data and configuration that accumulate over time without being used. These are not edge cases. They are patterns.</p>
+
+		<p>With that direction set, I moved into building the first versions of these tools using the automation pipeline I had been working on. Instead of manually creating everything, I used the system to generate initial HTML web resource mockups for each of the three tools.</p>
+
+		<p>This was a key moment in the project. For the first time, the system was not just being tested. It was being used to actually build something that fits into the larger vision.</p>
+
+		<p>From there, I started transitioning those mockups into JavaScript-based web resources that could be used within Dynamics. This is where things became more hands-on again. The generated output was a starting point, but it still required review, adjustments, and an understanding of how it would function within the platform.</p>
+
+		<p>I focused first on the stalled process panel. I reviewed the generated code, made adjustments where needed, and then brought it into Dynamics as a web resource for testing. This was the first time I was able to see one of these tools begin to take shape inside the actual environment.</p>
+
+		<p>What stood out during this process was the shift in my role. I was not just writing code, and I was not just prompting an AI. I was reviewing, guiding, and making decisions about what should and should not be included. The AI was producing output, but I was responsible for shaping it into something usable.</p>
+
+		<p>This reinforced something that has been building throughout this project. The value is not in having an AI that can generate code. The value is in designing a system where that code can be generated, evaluated, and integrated into a broader product.</p>
+
+		<p>By the end of the day, I had the foundation of all three tools mocked out and the first one partially implemented and tested within Dynamics. It is still early, and there is a lot to refine, but this is the first time the project feels like it is producing something tangible.</p>
+
+		<p>The next step is to continue building out these tools, refine their functionality, and start thinking about how they connect together as part of a cohesive system. The system is now in place. Now it is time to see what it can actually produce.</p>
+	</div>
+</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://x.com/TGGBmhg" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://github.com/thegoodestgoodboy" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
