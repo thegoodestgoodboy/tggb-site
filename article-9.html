@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 12: Making It Work: Debugging Web Resources in Dynamics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Day 12: Making It Work: Debugging Web Resources in Dynamics</h1>
+		<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+
+		<p>After getting the initial versions of the tools into Dynamics, today became entirely focused on one thing: getting them to actually work.</p>
+
+		<p>Up until now, most of the effort had gone into building the system and generating the code. But bringing that code into Dynamics exposed a different layer of complexity. What worked in isolation was not behaving the same way inside the platform.</p>
+
+		<p>The main issue was that the web resources were not loading or executing as expected. At first glance, everything looked correct. The files were uploaded, the references seemed right, and there were no obvious syntax errors. But the functionality simply was not there.</p>
+
+		<p>This is where the nature of the problem shifted. It was no longer about writing code. It was about understanding how Dynamics actually serves and executes web resources.</p>
+
+		<p>One thing that stood out to me during this process is that even though I work in Dynamics regularly from a support perspective, I rarely have to deploy and wire up my own web resources from scratch. Most of my experience has been troubleshooting issues within existing implementations, not building and integrating new ones end-to-end.</p>
+
+		<p>This ended up being a valuable learning moment. It forced me to go deeper into how the platform actually behaves behind the scenes, rather than just how it presents itself from a support standpoint. It also highlighted the difference between diagnosing a problem and building something that needs to work reliably from the ground up.</p>
+
+		<p>Through testing and iteration, a few key issues started to surface. One of the first was how web resources are referenced. The distinction between display names and actual resource names became important. What looks correct in the UI is not always what the system expects when loading a script.</p>
+
+		<p>Another issue was script loading paths. Referencing the correct path for JavaScript files is critical, and even small inconsistencies can cause the entire resource to fail silently. This made debugging more difficult because there were no clear error messages pointing to a single root cause.</p>
+
+		<p>There was also the matter of publishing. Saving changes to a web resource is not enough. The resource must be published before Dynamics will serve the updated version. Without that step, it is easy to end up testing outdated code and chasing issues that have already been fixed.</p>
+
+		<p>On top of that, browser caching introduced another layer of confusion. Even after making changes and publishing them, the browser may still serve an older version of the script. This made it necessary to verify changes through direct resource URLs and developer tools rather than relying on the UI alone.</p>
+
+		<p>Individually, none of these issues are particularly complex. But together, they create a system where small mistakes can compound and make debugging feel unclear and inconsistent.</p>
+
+		<p>The breakthrough came when everything was aligned correctly. The resource name matched the reference, the script path was correct, the resource was published, and the browser was loading the latest version. Once those pieces were in place, the web resource loaded and executed as expected.</p>
+
+		<p>This was one of the more satisfying moments in the project so far. Not because of the complexity of the solution, but because it required a deeper understanding of both the platform and the process.</p>
+
+		<p>Today reinforced an important lesson. Building functionality is only part of the work. Understanding the environment where that functionality lives is just as important. It also reinforced something more personal: moving from support into product means not just understanding systems when they break, but understanding how to build them so they work in the first place.</p>
+
+		<p>With this issue resolved, the path forward is much clearer. The focus can now shift back to building out the actual tools, knowing that the foundation for deploying and testing them inside Dynamics is working properly.</p>
+	</div>
+</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://x.com/TGGBmhg" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://github.com/thegoodestgoodboy" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
