@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 13: From Building to Managing - My First Real AI Sprint</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/tggb-logo.svg" alt="" /></span><span class="title">TGGB</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Day 12 — From Building to Managing: My First Real AI Sprint</h1>
+		<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+
+		<p>Today was a shift.</p>
+
+		<p>Up until now, I’ve been focused on getting things working — setting up OpenClaw, wiring up my environment, building out my first Dynamics web resources, and troubleshooting all the little things that break along the way.</p>
+
+		<p>But today, I took a step back and realized something:</p>
+
+		<p><strong>If I want to transition into Product Management, I can’t just build — I need to start running this like a product team.</strong></p>
+
+		<h2>Moving Into Agile (For Real This Time)</h2>
+
+		<p>I’ve read about Agile. I’ve been around it. I’ve even participated in parts of it before.</p>
+
+		<p>But this is the first time I’ve actually owned the process end-to-end.</p>
+
+		<p>I decided to start breaking my work into simulated sprints, using Azure DevOps as my control plane and OpenClaw as my “AI developer.”</p>
+
+		<p>That meant:</p>
+		<ul>
+			<li>Defining a Sprint Goal</li>
+			<li>Creating User Stories</li>
+			<li>Breaking those into atomic tasks</li>
+			<li>Assigning work into an iteration</li>
+			<li>Estimating using story points</li>
+			<li>And most importantly — controlling execution</li>
+		</ul>
+
+		<h2>Designing a Sprint Planning System</h2>
+
+		<p>Instead of jumping straight into development, I created a dedicated Sprint Planning workflow.</p>
+
+		<p>I built out a reusable template that includes:</p>
+		<ul>
+			<li>Sprint context</li>
+			<li>A clear, outcome-focused goal</li>
+			<li>Candidate backlog items</li>
+			<li>Committed scope</li>
+			<li>Story points</li>
+			<li>Execution order (critical for AI)</li>
+			<li>Risks and unknowns</li>
+			<li>Definition of done</li>
+			<li>And something new — AI execution instructions</li>
+		</ul>
+
+		<p>That last piece turned out to be the most important.</p>
+
+		<h2>The Realization: AI Needs Constraints, Not Just Prompts</h2>
+
+		<p>Up until now, I was treating OpenClaw like a smart assistant:
+		<ul>
+			<li>Give it a task</li>
+			<li>Let it plan</li>
+			<li>Let it execute</li>
+		</ul>
+		</p>
+
+		<p>But that approach breaks down fast when you're trying to simulate a real development environment.</p>
+
+		<p>So I introduced a new concept into my user stories:</p>
+
+		<p><strong>Execution Instructions</strong></p>
+
+		<p>These act like guardrails for the AI:</p>
+		<ul>
+			<li>Work one task at a time</li>
+			<li>Do not implement the full solution in one pass</li>
+			<li>Explain the approach before coding</li>
+			<li>Confirm completion after each task</li>
+			<li>Do not move ahead without finishing the current step</li>
+		</ul>
+
+		<p>What I’m effectively doing is turning Azure DevOps into:</p>
+
+		<p><strong>A task queue for an autonomous developer</strong></p>
+
+		<h2>Structuring the Backlog</h2>
+
+		<p>For my first sprint, I focused on a single vertical slice:</p>
+
+		<p><strong>Capacity Forecaster → Storage Usage</strong></p>
+
+		<p>Instead of trying to build everything, I broke it down into:</p>
+		<ul>
+			<li>Retrieve Dataverse storage usage</li>
+			<li>Abstract data into a service layer</li>
+			<li>Load data on initialization</li>
+			<li>Render it in the UI</li>
+			<li>Handle errors</li>
+		</ul>
+
+		<p>Each of these became separate tasks, intentionally small and sequential.</p>
+
+		<p>The idea was simple:</p>
+
+		<p><strong>Don’t let the AI think — let it execute.</strong></p>
+
+		<h2>First Execution… and First Lesson</h2>
+
+		<p>I kicked off the pipeline on the first task:</p>
+
+		<p><em>“Identify correct Dataverse endpoint”</em></p>
+
+		<p>What I expected:</p>
+		<ul>
+			<li>Some notes</li>
+			<li>Possibly a test query</li>
+			<li>Basic exploration</li>
+		</ul>
+
+		<p>What I got instead:</p>
+
+		<p>A fully built, production-ready service layer:</p>
+		<ul>
+			<li>API call implemented</li>
+			<li>Data conversion helpers</li>
+			<li>Error handling</li>
+			<li>Logging</li>
+			<li>Reusable global service</li>
+		</ul>
+
+		<p>Technically, it was great.</p>
+		<p>Process-wise, it completely ignored the task boundaries.</p>
+
+		<h2>The Key Learning</h2>
+
+		<p>This was the biggest takeaway of the day:</p>
+
+		<p><strong>AI will always try to solve the entire problem unless you explicitly prevent it.</strong></p>
+
+		<p>Even with instructions like “do one task at a time,” it still jumped ahead.</p>
+
+		<p>That told me something important:</p>
+
+		<p><strong>My system wasn’t strict enough yet.</strong></p>
+
+		<h2>Adjusting the System</h2>
+
+		<p>Going forward, I need to tighten control by:</p>
+		<ul>
+			<li>Making tasks even more explicit and atomic</li>
+			<li>Adding stricter execution rules (no future work, no assumptions)</li>
+			<li>Enforcing validation before moving to the next task</li>
+			<li>Treating tasks as hard execution boundaries, not suggestions</li>
+		</ul>
+
+		<p>This is no longer just about writing code.</p>
+
+		<p>It’s about:</p>
+
+		<p><strong>Designing a system that controls how code gets written</strong></p>
+
+		<h2>Something Else Happened</h2>
+
+		<p>For the first time, I actually felt like I was:</p>
+		<ul>
+			<li>Planning work</li>
+			<li>Sequencing dependencies</li>
+			<li>Managing execution</li>
+			<li>Validating outputs</li>
+		</ul>
+
+		<p>Not just building.</p>
+
+		<p>That’s when it clicked:</p>
+
+		<p><strong>This is what Product Management actually feels like.</strong></p>
+
+		<h2>Where This Is Going</h2>
+
+		<p>Right now, I’m still early.</p>
+
+		<p>But I now have:</p>
+		<ul>
+			<li>A working UI inside Dynamics</li>
+			<li>A structured sprint system</li>
+			<li>A backlog in Azure DevOps</li>
+			<li>An AI developer executing tasks</li>
+			<li>And a feedback loop to improve the system</li>
+		</ul>
+
+		<p>Next up:</p>
+		<ul>
+			<li>Enforce task-level discipline</li>
+			<li>Validate real data retrieval</li>
+			<li>Continue building out the console one slice at a time</li>
+		</ul>
+
+		<h2>Final Thought</h2>
+
+		<p>Today wasn’t about shipping a feature.</p>
+
+		<p>It was about learning how to:</p>
+
+		<p><strong>Run development, not just do development</strong></p>
+
+		<p>And that feels like a much bigger step.</p>
+
+		<p>More tomorrow.</p>
+	</div>
+</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://x.com/TGGBmhg" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://github.com/thegoodestgoodboy" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
